@@ -23,7 +23,7 @@ function App() {
       userId: 1,
       id: 3,
       title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis par",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium",
       like: false,
     },
     {

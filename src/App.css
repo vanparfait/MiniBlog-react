@@ -34,7 +34,9 @@ body {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  /* ajout */
+  justify-content: space-between;
+  gap: 44px;
 }
 
 .post.active {
@@ -73,6 +75,7 @@ body {
 .btn {
   gap: 10px;
   display: flex;
+  /* margin-left: 50px; */
 }
 .btn .delete {
   background-color: rgb(205, 106, 106);
