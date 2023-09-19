@@ -42,11 +42,19 @@ function App() {
     },
   ]);
 
+  function likePost(post) {
+    const copyPosts = [...posts];
+    const index = posts.indexOf(post);
+    copyPosts[index] = { ...posts[index], like: !posts[index].like };
+    setPosts(copyPosts);
+    console.log(copyPosts);
+  }
+
   return (
     <div className="App">
       <NavBar />
       {posts.map((post) => (
-        <Post key={post.id} title={post.title} body={post.body} />
+        <Post key={post.id} post={post} likePost={likePost} />
       ))}
     </div>
   );
