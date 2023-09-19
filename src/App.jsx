@@ -56,9 +56,10 @@ function App() {
     setPosts(postDelete);
   }
 
+  const nombreLike = posts.filter((post) => post.like);
   return (
     <div className="App">
-      <NavBar />
+      <NavBar nombreLike={nombreLike.length} />
       {posts.map((post) => (
         <Post
           key={post.id}

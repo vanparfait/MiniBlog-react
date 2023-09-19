@@ -1,9 +1,9 @@
 //import React from 'react';
 
-const NavBar = () => {
+const NavBar = ({ nombreLike }) => {
   return (
     <div className="entete">
-      <h3>Les posts Likes sont : </h3>
+      <h3>Les posts Likes sont :{nombreLike} </h3>
     </div>
   );
 };
