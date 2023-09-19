@@ -3,7 +3,7 @@
 
 const Post = ({ post, likePost }) => {
   return (
-    <div className="post">
+    <div className={post.like ? "post active" : "post"}>
       <div>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
