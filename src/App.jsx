@@ -47,14 +47,25 @@ function App() {
     const index = posts.indexOf(post);
     copyPosts[index] = { ...posts[index], like: !posts[index].like };
     setPosts(copyPosts);
-    console.log(copyPosts);
+    //console.log(copyPosts);
+  }
+
+  function deletePost(id) {
+    const postDelete = posts.filter((post) => post.id !== id);
+    console.log(postDelete);
+    setPosts(postDelete);
   }
 
   return (
     <div className="App">
       <NavBar />
       {posts.map((post) => (
-        <Post key={post.id} post={post} likePost={likePost} />
+        <Post
+          key={post.id}
+          post={post}
+          likePost={likePost}
+          deletePost={deletePost}
+        />
       ))}
     </div>
   );

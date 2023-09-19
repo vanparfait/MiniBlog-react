@@ -1,7 +1,7 @@
 //import React from "react";
 //import PropTypes from "prop-types";
 
-const Post = ({ post, likePost }) => {
+const Post = ({ post, likePost, deletePost }) => {
   return (
     <div className={post.like ? "post active" : "post"}>
       <div>
@@ -14,7 +14,9 @@ const Post = ({ post, likePost }) => {
           {" "}
           {post.like ? "Deja liker" : "Liker"}{" "}
         </button>
-        <button className="delete">Effacer</button>
+        <button onClick={() => deletePost(post.id)} className="delete">
+          Effacer
+        </button>
       </div>
     </div>
   );
